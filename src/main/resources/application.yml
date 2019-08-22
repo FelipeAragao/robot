@@ -1,0 +1,8 @@
+
+spring:
+  application:
+    name: robot
+mars:
+  size:
+    x: ${MARS_SIZE_X:5}
+    y: ${MARS_SIZE_Y:5}
