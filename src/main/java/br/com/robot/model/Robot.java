@@ -4,6 +4,7 @@ package br.com.robot.model;
 import br.com.robot.enums.Direction;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class Robot implements Serializable {
     private Integer x;
@@ -47,5 +48,20 @@ public class Robot implements Serializable {
                 ", y=" + y +
                 ", direction=" + direction +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Robot robot = (Robot) o;
+        return Objects.equals(x, robot.x) &&
+                Objects.equals(y, robot.y) &&
+                direction == robot.direction;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(x, y, direction);
     }
 }

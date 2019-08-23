@@ -43,7 +43,7 @@ public class RobotSeviceImpl implements RobotSevice {
             else
                 Command.getMove(robot);
 
-            logger.info(String.format("move %s: %s", r, robot.toString()));
+            logger.info(String.format("action %s: %s", r, robot.toString()));
             if (robot.getX() >= 0 && robot.getX() < marsSizeX &&
                     robot.getY() >= 0 && robot.getY() < marsSizeY)
                 continue;
